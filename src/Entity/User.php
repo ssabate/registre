@@ -20,7 +20,7 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="string", length=180, unique=true)
      */
-    private $email;
+    private $email='pepe';
 
     /**
      * @ORM\Column(type="json")
@@ -31,12 +31,12 @@ class User implements UserInterface
      * @var string The hashed password
      * @ORM\Column(type="string")
      */
-    private $password;
+    private $password='pepe';
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $firstName;
+    private $firstName='pepe';
 
     public function getId(): ?int
     {

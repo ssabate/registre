@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
@@ -32,4 +33,16 @@ class SecurityController extends AbstractController
             'error'         => $error,
         ]);
     }
+
+
+    /**
+     * @Route("/", name="app_homepage")
+     */
+    public function homepage(UserRepository $repository)
+    {
+        return $this->render('base.html.twig', [
+        ]);
+    }
+
+
 }
